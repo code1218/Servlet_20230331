@@ -56,7 +56,7 @@ public class SignIn extends HttpServlet {
 		// 로그인 성공
 		HttpSession session = request.getSession();
 		session.setAttribute("AuthenticationPrincipal", user.getUserId());
-		
+		System.out.println("실행?");
 		ResponseDto<Boolean> responseDto = 
 				new ResponseDto<Boolean>(200, "사용자 인증 성공", true);
 		out.println(gson.toJson(responseDto));
